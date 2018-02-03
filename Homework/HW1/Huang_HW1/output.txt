@@ -1,0 +1,66 @@
+The number -28: Error: prime number has to be natural number that larger than 1
+It returns a value of 961940553 when inserted into the function polynomialInt.
+
+The number -28: Error: prime number has to be natural number that larger than 1
+It returns a value of 9.61941e+08 when inserted into the function polynomialDouble.
+
+The number 0: Error: prime number has to be natural number that larger than 1
+It returns a value of -7 when inserted into the function polynomialInt.
+
+The number 0: Error: prime number has to be natural number that larger than 1
+It returns a value of -7 when inserted into the function polynomialDouble.
+
+The number 11: is a prime
+It returns a value of 3499797 when inserted into the function polynomialInt.
+
+The number 11: is a prime
+It returns a value of 3.4998e+06 when inserted into the function polynomialDouble.
+
+The number 45: is not a prime
+It returns a value of -584629691 when inserted into the function polynomialInt.
+
+The number 45: is not a prime
+It returns a value of 1.65952e+10 when inserted into the function polynomialDouble.
+
+The number 397: is a prime
+It returns a value of -360901371 when inserted into the function polynomialInt.
+
+The number 397: is a prime
+It returns a value of 7.83013e+15 when inserted into the function polynomialDouble.
+
+The number 677: is a prime
+It returns a value of -402325899 when inserted into the function polynomialInt.
+
+The number 677: is a prime
+It returns a value of 1.92558e+17 when inserted into the function polynomialDouble.
+
+The number 951: is not a prime
+It returns a value of -128705779 when inserted into the function polynomialInt.
+
+The number 951: is not a prime
+It returns a value of 1.47949e+18 when inserted into the function polynomialDouble.
+
+The number 2522: is not a prime
+It returns a value of -1688171139 when inserted into the function polynomialInt.
+
+The number 2522: is not a prime
+It returns a value of 5.14636e+20 when inserted into the function polynomialDouble.
+
+The number 6449: is a prime
+It returns a value of 1324365021 when inserted into the function polynomialInt.
+
+The number 6449: is a prime
+It returns a value of 1.43875e+23 when inserted into the function polynomialDouble.
+
+The number 7411: is a prime
+It returns a value of 1744857093 when inserted into the function polynomialInt.
+
+The number 7411: is a prime
+It returns a value of 3.31353e+23 when inserted into the function polynomialDouble.
+
+The number 7412: is not a prime
+It returns a value of 1802934217 when inserted into the function polynomialInt.
+
+The number 7412: is not a prime
+It returns a value of 3.31621e+23 when inserted into the function polynomialDouble.
+

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Huang_HW5</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">24-623 Molecular Simulation of Materials</h1>
+
+<h2 id="toc_1">Junrong Huang Assignment 5</h2>
+
+<ol>
+<li><p><strong>(25 points) In this problem, you will use Monte Carlo simulations to study the properties of the single oscillators from HW#2, which had potential energies (i)\(U=x^2/2\) and (ii)\(U=x^4-2x^2+1\)</strong></p>
+
+<p><strong>(a) Determine \(&lt;U&gt;\), \(&lt;x&gt;\), and \(&lt;x^2&gt;\) for \(\beta=0.1, 1, 5\ and\ 10\) for oscillator (i) by directly evaluating the appropriate integrals (either analytically or numerically).</strong></p>
+
+<p><strong>(b) Write a C++ code that uses the Metropolis Monte Carlo algorithm to compute \(&lt;U&gt;\), \(&lt;x&gt;\), and \(&lt;x^2&gt;\) for \(\beta=0.1, 1, 5\ and\ 10\) for oscillator (i). Discuss the following: How did you specify the trial move? How did you specify the maximum step size? How did you specify the initial condition and does it matter? How many trial moves do you need to get convergence of \(&lt;U&gt;\), \(&lt;x&gt;\), and \(&lt;x^2&gt;\)</strong></p>
+
+<p><strong>(c) Present all of your direct evaluation and Monte Carlo results in a single table and compare them.</strong></p>
+
+<p><strong>(d) Compare your results to the behavior you observed in HW#2.</strong></p>
+
+<p><strong>(e) Repeats part (a)-(d) for oscillator (ii).</strong></p>
+
+<p><strong><em>Answer:</em></strong></p>
+
+<p><strong><em>(a)</em></strong> The probability of the mass point shows on position x:</p>
+
+<p>\[\begin{align}
+P&amp;=\frac{exp(-\beta U)}{\int_{-\infty}^{\infty}exp(-\beta U)dx}\\
+\end{align}\]</p>
+
+<p>For \(U\):</p>
+
+<p>\[&lt;U&gt;=\int_{-\infty}^{\infty}UPdx=\frac{\int_{-\infty}^{\infty}x^2/2exp(-\beta U)dx}{\int_{-\infty}^{\infty}exp(-\beta U)dx}\]</p>
+
+<p>For \(x\):</p>
+
+<p>\[&lt;x&gt;=\int_{-\infty}^{\infty}xPdx=\frac{\int_{-\infty}^{\infty}xexp(-\beta U)dx}{\int_{-\infty}^{\infty}exp(-\beta U)dx}\]</p>
+
+<p>For \(x^2\):</p>
+
+<p>\[&lt;x^2&gt;=\int_{-\infty}^{\infty}x^2Pdx=\frac{\int_{-\infty}^{\infty}x^2exp(-\beta U)dx}{\int_{-\infty}^{\infty}exp(-\beta U)dx}\]</p>
+
+<p>I used the numerical method to calculate these integrals, the detailed program is saved in <strong><em>./1/1a/1a.cpp</em></strong>. To modify the specific oscillator, change the Potential function to get the results.</p>
+
+<ul>
+<li>  <strong><em>For oscillator(i): \(U=x^2/2\)</em></strong></li>
+</ul>
+
+<p>\[\begin{array}{c|c}
+ &amp; \beta=0.1 &amp; \beta=1 &amp; \beta=5 &amp; \beta=10 \\
+\hline
+&lt;U&gt; &amp; 5.00 &amp; 0.50 &amp; 0.10 &amp; 0.05 \\
+&lt;x&gt; &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+&lt;x^2&gt; &amp; 10.00 &amp; 1.00 &amp; 0.20 &amp; 0.10\\
+\end{array}\]</p>
+
+<ul>
+<li>  <strong><em>For oscillator(ii): \(U=x^4-2x^2+1\)</em></strong></li>
+</ul>
+
+<p>\[\begin{array}{c|c}
+ &amp; \beta=0.1 &amp; \beta=1 &amp; \beta=5 &amp; \beta=10 \\
+\hline
+&lt;U&gt; &amp; 2.10418 &amp; 0.417255 &amp; 0.113166 &amp; 0.0524772\\
+&lt;x&gt; &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+&lt;x^2&gt; &amp; 1.39582 &amp; 0.832745 &amp; 0.936834 &amp; 0.972523\\
+\end{array}\]</p>
+
+<p><strong><em>(b)</em></strong></p>
+
+<p>The detailed basid codes are saved in <strong><em>./1/1b/1b.cpp</em></strong>.</p>
+
+<p>To get the data various with maximum trial moves, maximun step size, initial conditions and to determine how many trial moves is needed for \(&lt;U&gt;\), \(&lt;x&gt;\), \(&lt;x^2&gt;\)to converge, I developed some other algorithms saved in the <strong><em>./1/1b</em></strong> floder. Using circulation wrt to &quot;TRIALMAX, &quot;STEP&quot;, &quot;X0&quot; to get the plot below:</p>
+
+<ul>
+<li><p><strong><em>For oscillator(i): \(U=x^2/2\)</em></strong></p>
+
+<ul>
+<li><p>Maximum trial moves size</p>
+
+<p>To consider the maximum trial moves size, I chose the other parameters as: \(STEP=100,000\), \(X0=0\). Plot the \(&lt;U&gt;, &lt;x&gt;, &lt;x^2&gt;\) with different \(\beta\) as below:</p>
+
+<div align=center><img src="./1/1b/trialmove/1_beta_01.png" width =50%" /><img src="./1/1b/trialmove/1_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/trialmove/1_beta_5.png" width =50%" /><img src="./1/1b/trialmove/1_beta_10.png" width =50%" /></div>
+
+<p>From the graphs shown above, the maximum trial moves size value should not be either too large nor too small. If the maximum tiral moves size value is too small, it will need a larger &quot;STEP&quot; to generate a equilibrium system, which means the cost of computational resources will be expensive. If the maximum tiral moves size value is too large, the fluctuation of \(&lt;U&gt;\), \(&lt;x&gt;\) and \(&lt;x^2&gt;\) will be very large. For grater \(\beta\) value, the appropriate maximum trial move size value is smaller. As we can see from the graphs the choice of \(Trial_{max}\):</p>
+
+<p>\[\begin{array}{c|c}
+ &amp; \beta=0.1 &amp; \beta=1 &amp; \beta=5 &amp; \beta=10 \\
+\hline
+Trial_{max} &amp; 5 &amp; 3 &amp; 2 &amp; 1\\
+\end{array}\]</p></li>
+<li><p>Maximum step</p>
+
+<p>To consider the maximum step, the other parameters: \(Trial_{max}=1\), \(X0=0\). Plot the \(&lt;U&gt;, &lt;x&gt;, &lt;x^2&gt;\) with different \(\beta\) as below:</p>
+
+<div align=center><img src="./1/1b/step/1_beta_01.png" width =50%" /><img src="./1/1b/step/1_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/step/1_beta_5.png" width =50%" /><img src="./1/1b/step/1_beta_10.png" width =50%" /></div>
+
+<p>From the graphs shown above, the larger maximum ste will give us a better convergence of values \(&lt;U&gt;\), \(&lt;x&gt;\), \(&lt;x^2&gt;\). Therefore, inspite of the cost of computational resources, larger maximum ste is preferred. However, in these cases, I&#39;ll choose maximum step to be 1,000,000.</p></li>
+<li><p>Initial condition</p>
+
+<p>To consider the maximum step size, the other parameters: \(Trial_{max}\) varies with \(\beta\)(see Maximum trial move size section), \(STEP=1,000,000\). Plot the \(&lt;U&gt;, &lt;x&gt;, &lt;x^2&gt;\) with different \(\beta\) as below:</p>
+
+<div align=center><img src="./1/1b/initial/1_beta_01.png" width =50%" /><img src="./1/1b/initial/1_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/initial/1_beta_5.png" width =50%" /><img src="./1/1b/initial/1_beta_10.png" width =50%" /></div>
+
+<p>From the graphs shown above, the initial position should be chosen around 0 for all cases</p></li>
+</ul></li>
+<li><p><strong><em>For oscillator(ii): \(U=x^4-2x^2+1\)</em></strong></p>
+
+<ul>
+<li>  Maximum trial moves size</li>
+</ul>
+
+<p>To consider the maximum trial moves size, I chose the other parameters as: \(STEP=100,000\), \(X0=0\). Plot the \(&lt;U&gt;, &lt;x&gt;, &lt;x^2&gt;\) - \(Trial_{max}\) with different \(\beta\) as below:</p>
+
+<div align=center><img src="./1/1b/trialmove/2_beta_01.png" width =50%" /><img src="./1/1b/trialmove/2_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/trialmove/2_beta_5.png" width =50%" /><img src="./1/1b/trialmove/2_beta_10.png" width =50%" /></div>
+
+<p>From the graphs shown above, the maximum trial moves size value have the same trend as the oscillator(i). However, when the \(\beta\) is large, small value of trial moves size will lead to a local equilibrium instead of a global equilibrium, i.e. \(&lt;x&gt;=0\) or \(&lt;x&gt;=-1\). Though the potential energy and \(&lt;x^2&gt;\) value seem no difference with the global equilibrium, it is because the potential energy function is an evne function. Only taking the positive string part or the negative string part will produce the same equilibrium energy state as the whole equilibrium energy state. In this oscillator(ii) case I&#39;ll choose maximum trial move size as 2.5 for most of the cases.</p>
+
+<p>\[\begin{array}{c|c}
+ &amp; \beta=0.1 &amp; \beta=1 &amp; \beta=5 &amp; \beta=10 \\
+\hline
+Trial_{max} &amp; 2.5 &amp; 2.5 &amp; 2.5 &amp; 2.5\\
+\end{array}\]</p>
+
+<ul>
+<li><p>Maximum step</p>
+
+<p>To consider the maximum step, the other parameters: \(Trial_{max}=2.5\)(explained above), \(X0=0\). Plot the \(&lt;U&gt;, &lt;x&gt;, &lt;x^2&gt;\) with different \(\beta\) as below:</p>
+
+<div align=center><img src="./1/1b/step/2_beta_01.png" width =50%" /><img src="./1/1b/step/2_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/step/2_beta_5.png" width =50%" /><img src="./1/1b/step/2_beta_10.png" width =50%" /></div>
+
+<p>(*Note: When I firstly choose \(Trial_{max}=1\), the \(&lt;x&gt;\) vs STEP cannot converge even with a maximum step value of 10,000,000 when \(\beta=10\). It can be explained on the graph shown in section &quot;Maximum trial moves size&quot; when \(\beta=10\), \(Trial_{max}=1\), the distribution of \(&lt;x&gt;\) is not converged.)</p>
+
+<p>Therefore, when the \(Trial_{max}\) is specified as 2.5, I&#39;ll choose the maximum step to be 200,000.</p></li>
+<li><p>Initial condition</p>
+
+<p>To consider the maximum step size, the other parameters: \(Trial_{max}=2.5\), \(STEP=200,000\). Plot the \(&lt;U&gt;, &lt;x&gt;, &lt;x^2&gt;\) with different \(\beta\) as below:</p>
+
+<div align=center><img src="./1/1b/initial/2_beta_01.png" width =50%" /><img src="./1/1b/initial/2_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/initial/2_beta_5.png" width =50%" /><img src="./1/1b/initial/2_beta_10.png" width =50%" /></div>
+
+<p>From the graphs shown above, the initial position should be chosen around 0 for all cases.</p></li>
+</ul></li>
+</ul>
+
+<p><strong><em>(c)</em></strong></p>
+
+<ul>
+<li><p><strong><em>For oscillator(i): \(U=x^2/2\)</em></strong></p>
+
+<p>Parameters set:</p>
+
+<p>\[X_0=0,\ STEP=200,000\]</p>
+
+<p>Put those parameters into the program <strong><em>./1/1b/basic/1b.cpp</em></strong> to get the final \(&lt;U&gt;\), \(&lt;x&gt;\), \(&lt;x^2&gt;\) value with different \(\beta\)</p>
+
+<p>\[\begin{array}{c|c}
+ &amp; \beta=0.1 &amp; \beta=1 &amp; \beta=5 &amp; \beta=10 \\
+\hline
+Trial_{max} &amp; 5 &amp; 3 &amp; 2 &amp; 1\\
+&lt;U&gt;_{MC} &amp; 5.00472 &amp; 0.499212 &amp; 0.100305 &amp; 0.0498353 \\
+&lt;x&gt;_{MC} &amp; -0.01133 &amp; -0.000819 &amp; -0.000670 0 &amp; -0.000414 \\
+&lt;x^2&gt;_{MC} &amp; 10.00940 &amp; 0.998423 &amp; 0.200609 &amp; 0.0996707\\
+\hline
+&lt;U&gt;_{evaluation} &amp; 5.00 &amp; 0.50 &amp; 0.10 &amp; 0.05 \\
+&lt;x&gt;_{evaluation} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+&lt;x^2&gt;_{evaluation} &amp; 10.00 &amp; 1.00 &amp; 0.20 &amp; 0.10\\
+\end{array}\]</p>
+
+<p>The results are quite similar with the direct evaluation results.</p></li>
+<li><p><strong><em>For oscillator(ii): \(U=x^4-2x^2+1\)</em></strong></p>
+
+<p>Parameters set:</p>
+
+<p>\[X_0=0,\ STEP=200,000,\ Trial_{max}=1.0\]</p>
+
+<p>Put those parameters into the program <strong><em>./1/1b/basic/1b.cpp</em></strong> to get the final \(&lt;U&gt;\), \(&lt;x&gt;\), \(&lt;x^2&gt;\) value with different \(\beta\)</p>
+
+<p>\[\begin{array}{c|c}
+ &amp; \beta=0.1 &amp; \beta=1 &amp; \beta=5 &amp; \beta=10 \\
+\hline
+&lt;U&gt;_{MC} &amp; 2.10111 &amp; 0.416810 &amp; 0.112758 &amp; 0.0524263 \\
+&lt;x&gt;_{MC} &amp; -0.001741 &amp; -0.001055 &amp; -0.000867 &amp; 0.004530 \\
+&lt;x^2&gt;_{MC} &amp; 1.39717 &amp; 0.833569 &amp; 0.937159 &amp; 0.971401\\
+\hline
+&lt;U&gt;_{evaluation} &amp; 2.10418 &amp; 0.417255 &amp; 0.113166 &amp; 0.0524772\\
+&lt;x&gt;_{evaluation} &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+&lt;x^2&gt;_{evaluation} &amp; 1.39582 &amp; 0.832745 &amp; 0.936834 &amp; 0.972523\\
+\end{array}\]</p>
+
+<p>The results are quite similar with the direct evaluation results.</p></li>
+</ul>
+
+<p><strong><em>(d)</em></strong></p>
+
+<p>In HW2, the oscillator&#39;s motion is determined by the energy flow between the potential energy and the kinetic energy. In MC simulation, the potential energy is determined by the value of \(\beta\). From the graphs shown below, a bigger value of \(\beta\) will lead to a smaller range of position distribution, i.e. lower potential maximum bound in these two case.</p>
+
+<ul>
+<li><p><strong><em>For oscillator(i): \(U=x^2/2\)</em></strong></p>
+
+<div align=center><img src="./1/1b/basic/1_beta_01.png" width =50%" /><img src="./1/1b/basic/1_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/basic/1_beta_5.png" width =50%" /><img src="./1/1b/basic/1_beta_10.png" width =50%" /></div>
+
+<div align=center><img src="./1/1b/basic/hw2-1.png" width =100%" /></div></li>
+<li><p><strong><em>For oscillator(ii): \(U=x^4-2x^2+1\)</em></strong></p>
+
+<p>(*Note: Since the maximum trial move value are different in all cases, when \(\beta=10\), if the \(Trial_{max}=1\), I&#39;ll only get the positive half or the negative half of the graph. Maybe adjusting maximum step value can get a better result. However, when I choose \(Trial_{max}=2.5\), I can get the same output as the HW2.)</p>
+
+<div align=center><img src="./1/1b/basic/2_beta_01.png" width =50%" /><img src="./1/1b/basic/2_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/basic/2_beta_5.png" width =50%" /><img src="./1/1b/basic/2_beta_10.png" width =50%" /></div>
+
+<div align=center><img src="./1/1b/basic/hw2-2.png" width =100%" /></div></li>
+</ul></li>
+<li><p><strong>(25 points) Consider a two-particle system, where each particle can be in one of two states. The potential energy is \(U = U_1 + U_2 + U_1U_2\), where \(U_1\) and \(U_2\) are the potential energies of the two particles and can take on values of \(\gamma\) or \(\mu\).</strong></p>
+
+<p><strong>(a) List all microstates of this system. Develop an expression for \(&lt;U&gt;\) in terms of \(\beta\), \(\gamma\), and \(\mu\).</strong></p>
+
+<p><strong>(b) For \(\gamma = 0\) and \(\mu = 1\), plot \(&lt;U&gt;\) vs. \(\beta\) for \(0.01 ≤ \beta ≤ 100\). Make the \(\beta\) axis logarithmic. Interpret
+the limit of \(&lt;U&gt;\) as \(\beta → 0\) from a physical perspective.</strong></p>
+
+<p><strong>(c) Write a C++ code that uses Metropolis Monte Carlo algorithm to compute \(&lt;U&gt;\). Discuss the following: How did you specify the trial move? How did you specify the initial condition and does it matter?</strong></p>
+
+<p><strong>(d) For \(\gamma=0\) and \(\mu=1\), plot \(&lt;U&gt;\) from your MC code vs. \(\beta\) on the same graph as (b) for \(\beta=0.01, 0.1, 1, 10\ and\ 100\). Present all the data from (b) (for appropriate \(\beta\)) and the MC simulations in a single table. Discuss the following: How many trial moves do you need to get convergence of \(&lt;U&gt;\)? How do the results compare to those from (b)?</strong></p>
+
+<p><strong><em>Answer:</em></strong></p>
+
+<p><strong><em>(a)</em></strong></p>
+
+<p>\[\begin{array}{c|c}
+ &amp; U_1 &amp; U_2 &amp; U=U_1+U_2+U_1U_2 &amp; exp(-\beta U) \\
+\hline
+State1 &amp; \gamma &amp; \gamma &amp; 2\gamma+\gamma^2 &amp; exp(-\beta(2\gamma+\gamma^2)) \\
+State2 &amp; \gamma &amp; \mu &amp; \gamma+\mu+\gamma\mu &amp; exp(-\beta(\gamma+\mu+\gamma\mu)) \\
+State3 &amp; \mu &amp; \gamma &amp; \mu+\gamma+\mu\gamma &amp; exp(-\beta(\mu+\gamma+\mu\gamma)) \\
+State4 &amp; \mu &amp; \mu &amp; 2\mu+\mu^2 &amp; exp(-\beta(2\mu+\mu^2)) \\
+\end{array}\]</p>
+
+<p>Therefore, \(&lt;U&gt;\) in terms of \(\beta\), \(\gamma\) and \(\mu\):</p>
+
+<p>\[&lt;U&gt;=\sum U_{state}P_{state}\]</p>
+
+<p>\[=\frac{(2\gamma+\gamma^2)exp(-\beta(2\gamma+\gamma^2))+2(\gamma+\mu+\gamma\mu)exp(-\beta(\gamma+\mu+\gamma\mu)+(2\mu+\mu^2))exp(-\beta(2\mu+\mu^2))}{exp(-\beta(2\gamma+\gamma^2))+2exp(-\beta(\gamma+\mu+\gamma\mu))+exp(-\beta(2\mu+\mu^2))}\]</p>
+
+<p><strong><em>(b)</em></strong></p>
+
+<p>Given \(\gamma=0\) and \(\mu=1\),</p>
+
+<p>\[\begin{align}
+&lt;U&gt;&amp;=\sum U_{state}P_{state}\\
+&amp;=\frac{0\times exp(0)+2\times exp(-\beta)+3\times exp(-3\beta)}{exp(0)+2exp(-\beta)+exp(-3\beta)}\\
+&amp;=\frac{2exp(-\beta)+3exp(-3\beta)}{1+2exp(-\beta)+exp(-3\beta)}
+\end{align}\]</p>
+
+<p>Plot \(&lt;U&gt;\) vs \(log(\beta)\):</p>
+
+<div align=center><img src="./2/2b.png" width =100%" /></div>
+
+<p>From the graphs shown above, we can get the infomation that the ensembled-averaged potential \(&lt;U&gt;\) will decrease as \(\beta\) increase. It is because that the \(\beta=1/(k_BT)\). When \(\beta\) is approaching 0, i.e. the temperature is extremely high, particles are given high level of kinetic energy thus all the microstates are avaliable equally. The ensembled-averaged potential energy \(&lt;U&gt;=(0+1+1+3)/4=1.25\).</p>
+
+<p>It is revealed in the graph shown above, too. When \(\beta\) approach 0, the intersection of U is around 1.25.</p>
+
+<p><strong><em>(c)</em></strong></p>
+
+<p>How did you specify the trial move? </p>
+
+<ul>
+<li>  The trial move in this case mean a move from one microstate to another microstate(including itself). Each trial has a same probability 0.25.</li>
+</ul>
+
+<p>How did you specify the initial condition and does it matter?</p>
+
+<ul>
+<li>  The initial condition does not matter at all.</li>
+</ul>
+
+<p>The MC codes are saved in <strong><em>./2/2c.cpp</em></strong></p>
+
+<p><strong><em>(d)</em></strong></p>
+
+<p>To specify how many trial moves I need to congerge \(&lt;U&gt;\), I plot the \(&lt;U&gt;\) vs Step graph with different given \(\beta\) value:</p>
+
+<div align=center><img src="./2/2c_001.png" width =80%" /></div>
+<div align=center><img src="./2/2c_01.png" width =80%" /></div>
+<div align=center><img src="./2/2c_1.png" width =80%" /></div>
+<div align=center><img src="./2/2c_10.png" width =80%" /></div>
+<div align=center><img src="./2/2c_100.png" width =80%" /></div>
+
+<p>As shown above, choosing trial move steps to be \(2\times 10^6\) will be ensure the convergence of \(&lt;U&gt;\) </p>
+
+<p>Comparison between analytical results and MC simulation results of \(&lt;U&gt;\)</p>
+
+<p>\[\begin{array}{c|c}
+ &amp; \beta=0.01 &amp; \beta=0.1 &amp; \beta=1 &amp; \beta=10 &amp; \beta=100\\
+\hline
+&lt;U&gt;_{MC} &amp; 1.23837 &amp; 1.13503 &amp; 0.49400 &amp; 9.25\times 10^{-5} &amp; 0 \\
+&lt;U&gt;_{evaluation} &amp; 1.23817 &amp; 1.13565 &amp; 0.495714 &amp; 9.07916\times 10^{-5} &amp; 7.4476\times 10^{-44} \\
+\end{array}\]</p>
+
+<p>The MC simultaion results are quite similar with the direct evaluation results.</p>
+
+<p>Plot the \(&lt;U&gt;\) with \(\beta = 0.01, 0.1, 1, 10, 100\) on the same graph with analytical results:</p>
+
+<div align=center><img src="./2/2c.png" width =100%" /></div></li>
+</ol>
+
+<h4 id="toc_2">Bonus(5 points)</h4>
+
+<p><strong>The Metropolis acceptance/rejection criterion is not unique. There are other accep- tance/rejection criteria that can be used to perform Monte Carlo calculations in the N V T ensemble. Repeat 1(e) by computing the acceptance probability for all moves as</strong></p>
+
+<p>\[acc(old→new)=\frac{exp(-\beta\delta E/2)}{exp(-\beta\delta E/2)+exp(\beta\delta E/2)}\]</p>
+
+<p><strong>where \(\delta E = U (new)−U (old)\). Simulations performed using this criterion are called Kawasaki Monte Carlo. In addition to implementing Kawasaki Monte Carlo in your C++ code, show analytically that this criterion satisfies detailed balance. Compare your results to those from 1(e).</strong></p>
+
+<p><strong><em>Answer</em></strong></p>
+
+<p>Repeat 1(e) &quot;Repeats part (a)-(d) for oscillator (ii)&quot; with Kawasaki Monte Carlo acceptance probability:</p>
+
+<p><strong><em>For oscillator(ii): \(U=x^4-2x^2+1\)</em></strong></p>
+
+<ul>
+<li><p>Analytical deduction</p>
+
+<p>Detailed balance means:</p>
+
+<p>At any moment, the number of moves leaving from any state equal to the  number of moves entering into that state.</p>
+
+<p>To approach this, the sufficient but not necessary condition is: At any moment, the number of moves leaving from state &quot;Old&quot; toward &quot;New&quot; equal to the number of moves leaving from state &quot;New&quot; toward &quot;Old&quot;, i.e.,</p>
+
+<p>\[N(old)\pi(o\to n)=N(new)\pi(n\to o)\]</p>
+
+<p>In details:</p>
+
+<p>\[N(old)=N\times P(old)=\frac {exp(-\beta U_o)}{\sum exp(-\beta U_i)}\]</p>
+
+<p>\[\pi(o\to n)=\alpha(o\to n)acc(o\to n)=\alpha(o\to n)\frac{exp(-\beta(U_n-U_o)/2)}{exp(-\beta(U_n-U_o)/2)+exp(\beta(U_n-U_o)/2)}\]</p>
+
+<p>\[N(new)=N\times P(new)=\frac {exp(-\beta U_n)}{\sum exp(-\beta U_i)}\]</p>
+
+<p>\[\pi(n\to o)=\alpha(n\to o)acc(n\to o)=\alpha(n\to o)\frac{exp(\beta(U_n-U_o)/2)}{exp(-\beta(U_n-U_o)/2)+exp(\beta(U_n-U_o)/2)}\]</p>
+
+<p>where</p>
+
+<p>\[\alpha(o\to n)=\alpha(n\to o)\]</p>
+
+<p>Then:</p>
+
+<p>\[\frac{N(old)}{N(new)}=\frac{\pi(n\to o)}{\pi(o\to n)}=exp(-\beta(U_n-U_o))\]</p>
+
+<p>Therefore, this Kawasaki Monte Carlo satisfies the detailed balance.</p></li>
+<li><p>MC result</p>
+
+<p>Since the Kawasaki accptance method is not a piecewise function., we don&#39;t need to consider that when (\(U_{trial}&lt;U\)), \(acc = 1\). That&#39;s what we should change in our MC codes. The \(B-\delta U\) graph shown below:</p>
+
+<p>Original accptance \(B-\delta U\):</p>
+
+<div align=center><img src="./bonus/B_original.png" width =80%" /></div>
+
+<p>Kawasaki Monte Carlo acceptance \(B-\delta U\):</p>
+
+<div align=center><img src="./bonus/B_kawasaki.png" width =80%" /></div>
+
+<p>Comparing Kawasaki Monte Carlo accptance results and the original accptance results we used in question 1, w.r.t. to &quot;Maximum step size&quot;:</p>
+
+<p>Parameters:</p>
+
+<p>\[Trial_{max}=2.5, X0=0\]</p>
+
+<ul>
+<li>  \(&lt;U&gt;, &lt;x&gt;, &lt;x^2&gt;\) - \(Step\) with Original accptance:</li>
+</ul>
+
+<div align=center><img src="./1/1b/step/2_beta_01.png" width =50%" /><img src="./1/1b/step/2_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/step/2_beta_5.png" width =50%" /><img src="./1/1b/step/2_beta_10.png" width =50%" /></div>
+
+<ul>
+<li>  \(&lt;U&gt;, &lt;x&gt;, &lt;x^2&gt;\) - \(Step\) with Kawasaki accptance:</li>
+</ul>
+
+<div align=center><img src="./bonus/stepbeta_01.png" width =50%" /><img src="./bonus/stepbeta_1.png" width =50%" /></div>
+<div align=center><img src="./bonus/stepbeta_5.png" width =50%" /><img src="./bonus/stepbeta_10.png" width =50%" /></div>
+
+<p><u>In this part, the simulation results with Kawasaki accptance seem to converge faster than the simulation results with Original accptance.</u></p>
+
+<ul>
+<li>  \(&lt;U&gt;-x\) with Original accptance:</li>
+</ul>
+
+<div align=center><img src="./1/1b/basic/2_beta_01.png" width =50%" /><img src="./1/1b/basic/2_beta_1.png" width =50%" /></div>
+<div align=center><img src="./1/1b/basic/2_beta_5.png" width =50%" /><img src="./1/1b/basic/2_beta_10.png" width =50%" /></div>
+
+<ul>
+<li>  \(U-x\) with Kawasaki accptance:</li>
+</ul>
+
+<div align=center><img src="./bonus/Uxbeta_01.png" width =50%" /><img src="./bonus/Uxbeta_1.png" width =50%" /></div>
+<div align=center><img src="./bonus/Uxbeta_5.png" width =50%" /><img src="./bonus/Uxbeta_10.png" width =50%" /></div>
+
+<p><u>In this part, U-x distribution of both simulations are almost the same.</u></p>
+
+<ul>
+<li>  Comparision of \(&lt;U&gt;, &lt;x&gt;, &lt;x^2&gt;\) among Original accptance, Kawasaki accptance and Analytical evaluation.</li>
+</ul>
+
+<p>\[\begin{array}{c|c}
+ &amp; \beta=0.1 &amp; \beta=1 &amp; \beta=5 &amp; \beta=10 \\
+\hline
+&lt;U&gt;_{Original} &amp; 2.10111 &amp; 0.416810 &amp; 0.112758 &amp; 0.0524263 \\
+&lt;x&gt;_{Original} &amp; -0.001741 &amp; -0.001055 &amp; -0.000867 &amp; 0.004530 \\
+&lt;x^2&gt;_{Original} &amp; 1.39717 &amp; 0.833569 &amp; 0.937159 &amp; 0.971401 \\
+\hline
+&lt;U&gt;_{Kawasaki} &amp; 2.11306 &amp; 0.418762 &amp; 0.113237 &amp; 0.0503012\\
+&lt;x&gt;_{Kawasaki} &amp; -0.006307 &amp; -0.002389 &amp; -0.006091 &amp; -0.003228 \\
+&lt;x^2&gt;_{Kawasaki} &amp; 1.39861 &amp; 0.832942 &amp; 0.937149 &amp; 0.973427 \\
+\hline
+&lt;U&gt;_{evaluation} &amp; 2.10418 &amp; 0.417255 &amp; 0.113166 &amp; 0.0524772 \\
+&lt;x&gt;_{evaluation} &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+&lt;x^2&gt;_{evaluation} &amp; 1.39582 &amp; 0.832745 &amp; 0.936834 &amp; 0.972523 \\
+\end{array}\]</p></li>
+</ul>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>

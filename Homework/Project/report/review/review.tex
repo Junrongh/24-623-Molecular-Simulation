@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, enumerate}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{bm}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{float}
+\usepackage{graphics}
+\setlength{\marginparwidth}{2.15cm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{epsfig}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\usepackage[font=scriptsize]{subcaption}
+\usepackage{float}
+\usepackage[]{algorithm2e}
+\usepackage{environ}
+\usepackage{bbm}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{lastpage}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage[nottoc]{tocbibind}
+\usepackage{setspace}
+
+
+
+
+\begin{document}
+
+
+\section*{}
+\begin{center}
+  \vspace{0.5em}
+  \centerline{\textsc{\Large Course Project Review}}
+  \vspace{1em}
+  \textsc{\large CMU 24-623: Molecular Simulation of Materials (Fall 2017)} \\
+  \vspace{1em}
+  \textsc{\large Junrong Huang, Hongyi Liang} \\
+\end{center}
+
+\section*{}
+\begin{center}
+\centerline{\textbf{\Large Compare different thermostats for NVT MD simulations}}
+\centerline{Presented by: {\textbf Dipanjan and Matthew’s presentation}}
+\end{center}
+
+\begin{spacing}{1.5}
+
+\section*{}
+In Dipanjan and Matthew’s presentation, they mainly focused on the topic “Density of States from the Velocity Autocorrelation Function of Solid LJ Argon”.
+
+First of all, they gave a brief introduction to the concept of phonons, which will deconstruct into a model called Superimposed Phonon Modes. Using an example of a noisy classroom which consist of some meaningful conversation, they provide the foundation of phonon dispersion curve. Based on the previous dispersion curve, the density of states can be generated, which are useful in calculating total energy, heat capacity and thermal conductivity.
+
+In simulation part, they use Velocity autocorrelation method which can break simulation outputs up based on un-correlation time. Start from basic FCC crystals under NVT ensemble, they have performed MC or MD calculations and use VAC or FFT to calculate the Density of States(DOS). Then they present the average results in a graph and compare them with results in literatures. And they proposed that since LJ potential is an approximate harmonic well, when the temperature is low, namely the particles won’t move far from equilibrium positions, the results would be more accurate.
+
+In summary, the presentation is concise and layman-friendly.  They used some diagrams and animations to help audience understand some basic but important concepts. However, some informative comments are needed to illustrate those materials. It would be better if they can explain the results in detail as well as reasoning their simulation steps like why they separate the velocity into five parts. One thing worth noting is that there should be no time unit in simulation. Besides, they need to consider the cutoff for different temperature in future work.
+
+
+\end{spacing}
+
+\end{document}
